@@ -1,5 +1,8 @@
 package org.codefishstudio.rndownloadchecker;
 
+import android.util.Log;
+
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -26,15 +29,20 @@ public class RNDownloadCheckerModule extends ReactContextBaseJavaModule {
 
 
     @ReactMethod
-    public boolean verifyInstallerId() {
+    public void verifyInstallerId(final Promise promise) {
         // A list with valid installers package name
         List<String> validInstallers = new ArrayList<>(Arrays.asList("com.android.vending", "com.google.android.feedback"));
 
         // The package name of the app that has installed your app
         final String installer = reactContext.getPackageManager().getInstallerPackageName(reactContext.getPackageName());
 
+
+        boolean isValid = installer != null && validInstallers.contains(installer);
+
+        Log.d("BWP", String.valueOf(isValid));
+
         // true if your app has been downloaded from Play Store
-        return installer != null && validInstallers.contains(installer);
+        promise.resolve(isValid);
     }
 
 }

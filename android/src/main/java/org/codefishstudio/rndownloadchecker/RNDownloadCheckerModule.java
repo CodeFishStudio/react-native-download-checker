@@ -45,4 +45,10 @@ public class RNDownloadCheckerModule extends ReactContextBaseJavaModule {
         promise.resolve(isValid);
     }
 
+    @ReactMethod
+    public void closeApp() {
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(0);
+    }
+
 }

@@ -1,6 +1,6 @@
 {
   "name": "react-native-download-checker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Checks Android downloads to ensure the download is from Google Play store.",
   "main": "index.js",
   "homepage": "#",

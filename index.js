@@ -9,6 +9,10 @@ const DownloadChecker = {
 	verifyInstallerId() {
 		return RNDownloadChecker.verifyInstallerId();
 	},
+
+	closeApp() {
+		return RNDownloadChecker.closeApp();
+	}
 };
 
 module.exports = DownloadChecker;

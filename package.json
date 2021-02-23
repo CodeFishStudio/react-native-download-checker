@@ -1,0 +1,25 @@
+{
+  "name": "react-native-download-checker",
+  "version": "1.0.0",
+  "description": "Checks Android downloads to ensure the download is from Google Play store.",
+  "main": "index.js",
+  "homepage": "#",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Google",
+    "Play",
+    "download",
+    "checker",
+    "side-load",
+    "react-native"
+  ],
+  "nativePackage": true,
+  "author": "Will Turner",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "#"
+  }
+}
